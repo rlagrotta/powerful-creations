@@ -24,3 +24,55 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.menu_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_container__menu-title {
+    background-color: #83b81b;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 0px 0px 12px 12px;
+    z-index: 99;
+      transition: all 1s ease;
+}
+
+.menu_container__menu-title.open {
+  border-radius: 0px 0px 0px 0px;
+  filter: drop-shadow(0px 5px 3px #484848);
+    background-color: #83b81b;
+  color: white;
+  /* transition: all 0.3s ease;*/
+ animation: cubic-bezier(0.25, 1, 0.5, 1) forwards;
+ font-weight: 800;
+
+}
+
+.menu_container__menu-links {
+  display: inline-block;
+  background-color: grey;
+
+  transform: translateY(-200px);
+  pointer-events: none;
+  transition: all 1s ease;
+}
+
+.menu_container__menu-links.open {
+
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.close {
+}
+
+.menu_container__menu-links li {
+  border-bottom: 2px solid rgb(137, 137, 137) !important;
+  padding: 12px 0;
+    display: block;
+  padding: 10px;
+}
+
+
