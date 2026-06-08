@@ -29,6 +29,8 @@ body {
   position: relative;
   z-index: 999;
   background-color: white;
+position: relative;
+    text-align: -webkit-center;
 
 }
 
